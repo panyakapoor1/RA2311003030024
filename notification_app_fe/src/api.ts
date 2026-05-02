@@ -22,12 +22,12 @@ export interface ScoredNotification extends Notification {
 async function getAuthToken(): Promise<string> {
   await Log("frontend", "info", "auth", "Requesting auth token");
   const res = await axios.post(`${BASE_URL}/auth`, {
-    email: import.meta.env.VITE_EMAIL,
-    name: import.meta.env.VITE_NAME,
-    rollNo: import.meta.env.VITE_ROLL_NO,
-    accessCode: import.meta.env.VITE_ACCESS_CODE,
-    clientID: import.meta.env.VITE_CLIENT_ID,
-    clientSecret: import.meta.env.VITE_CLIENT_SECRET,
+    email: process.env.REACT_APP_EMAIL,
+    name: process.env.REACT_APP_NAME,
+    rollNo: process.env.REACT_APP_ROLL_NO,
+    accessCode: process.env.REACT_APP_ACCESS_CODE,
+    clientID: process.env.REACT_APP_CLIENT_ID,
+    clientSecret: process.env.REACT_APP_CLIENT_SECRET,
   });
   return res.data.access_token;
 }
