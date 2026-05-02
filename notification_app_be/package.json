@@ -1,0 +1,20 @@
+{
+  "name": "notification-app-be",
+  "version": "1.0.0",
+  "description": "Priority Inbox Algorithm - Stage 1",
+  "main": "dist/priority-inbox.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/priority-inbox.js",
+    "dev": "ts-node src/priority-inbox.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
